@@ -30,13 +30,17 @@ class TodoBox extends Component {
 
   render() {
     return (
-      <div className="todo-box">
-        <form onSubmit={this.onSubmit}>
-          <input type="text" placeholder="Nuevo Todo"
-            value={this.state.todoText}
-            onChange={(e)=>{this.setState({todoText:e.target.value})}}
-          />
-          <button type="submit">Agregar</button>
+      <div className="todo-box row justify-content-center">
+        <form onSubmit={this.onSubmit} className="form-inline">
+          <div className="form-group">
+            <label htmlFor="">TO DO:</label>
+            <input type="text" placeholder="Nuevo Todo"
+              className="ml-2 form-control"
+              value={this.state.todoText}
+              onChange={(e)=>{this.setState({todoText:e.target.value})}}
+            />
+          </div>
+          <button type="submit" className="btn btn-info">Agregar</button>
         </form>
       </div>
     );

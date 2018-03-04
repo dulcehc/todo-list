@@ -22,14 +22,14 @@ class TodoList extends Component {
     let item = this.state.items.map(
       (currentValue, index) => {
         return (
-          <li key={index}>{currentValue}</li>
+          <li className="list-group-item" key={index}>{currentValue}</li>
         )
       }
     )
 
     return (
-      <div className = "todo-list" >
-      <ul>
+      <div className = "todo-list mt-4 row justify-content-center" >
+      <ul className="list-group">
         {item}
       </ul>
       </div>
